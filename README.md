@@ -1,5 +1,5 @@
 # Lorentzian-Polynomials
-This repository contains Mathematica code to generate various polynomials and check that they are Lorentzian. There are individual Mathematica notebooks to test each of
+This repository contains Mathematica code to generate various polynomials and check that their normalizations are Lorentzian. There are individual Mathematica notebooks to test each of
 1) Schubert polynomials
 2) Skew Schur polynomials
 3) Grothendieck polynomials
