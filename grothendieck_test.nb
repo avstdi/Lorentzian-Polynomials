@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     58523,       1410]
-NotebookOptionsPosition[     57753,       1389]
-NotebookOutlinePosition[     58125,       1405]
-CellTagsIndexPosition[     58082,       1402]
+NotebookDataLength[     58626,       1412]
+NotebookOptionsPosition[     57856,       1391]
+NotebookOutlinePosition[     58228,       1407]
+CellTagsIndexPosition[     58185,       1404]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -91,9 +91,9 @@ Cell[BoxData[
     "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
       "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", 
      "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
-      "**"}], "*******)"}], "\[IndentingNewLine]", 
+      "**"}], "*******)"}], "\n", 
    RowBox[{"(*", 
-    RowBox[{"Supporting", " ", "methods"}], "*)"}], "\n", 
+    RowBox[{"Supporting", " ", "methods"}], "*)"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
@@ -215,14 +215,14 @@ Cell[BoxData[
           RowBox[{"w", "[", 
            RowBox[{"[", 
             RowBox[{"#", "+", "1"}], "]"}], "]"}]}], "&"}]}], "]"}], "]"}]}], 
-    ";"}], "\n", "\n", 
+    ";"}], "\n", "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{"Transposition", "[", 
       RowBox[{"i", ",", "j"}], "]"}], " ", "returns", " ", "the", " ", 
      "transposition", " ", "swapping", " ", "the", " ", "numbers", " ", "i", 
      " ", "and", " ", 
-     RowBox[{"j", "."}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"j", "."}]}], "*)"}], "\n", 
    RowBox[{
     RowBox[{
      RowBox[{"Transposition", "[", 
@@ -238,8 +238,8 @@ Cell[BoxData[
        RowBox[{"{", 
         RowBox[{
          RowBox[{"i", "->", "j"}], ",", 
-         RowBox[{"j", "->", "i"}]}], "}"}]}], ")"}]}], ";"}], "\n", 
-   "\[IndentingNewLine]", 
+         RowBox[{"j", "->", "i"}]}], "}"}]}], ")"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{
@@ -278,7 +278,7 @@ Cell[BoxData[
           FontFamily->"Felipa",
           FontWeight->"Plain"], "\[Sigma]"], " ", "according", " ", "to", " ",
          "the", " ", "transition", " ", 
-        RowBox[{"rule", "."}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"rule", "."}]}]}]}]}], "*)"}], "\n", 
    RowBox[{
     RowBox[{
      RowBox[{"TransitionRule", "[", 
@@ -629,8 +629,8 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"ddresults", "[", 
             RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", "True"}]}], "]"}], 
-        ";"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]",
-    "\n", 
+        ";"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
     "GeneralizedPermutahedronQ", " ", "takes", " ", "as", " ", "input", " ", 
@@ -806,7 +806,7 @@ Cell[BoxData[
         RowBox[{"Return", "[", 
          RowBox[{"GeneralizedPermutahedronQ", "[", "exps", "]"}], "]"}], 
         ";"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]",
-    "\[IndentingNewLine]", 
+    "\n", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{
@@ -824,7 +824,7 @@ Cell[BoxData[
        "test", " ", "is", " ", "commented", " ", "out", " ", "here", " ", 
       "since", " ", "we", " ", "are", " ", "forcing", " ", "nonnegative", " ",
        "coefficients", " ", "on", " ", "the", " ", "Grothendieck", " ", 
-      RowBox[{"polynomial", "."}]}]}], "*)"}], "\n", 
+      RowBox[{"polynomial", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
      RowBox[{"LorentzianPolynomialQ", "[", "h_", "]"}], ":=", 
@@ -835,7 +835,7 @@ Cell[BoxData[
         "oldvars", ",", "n", ",", "vars", ",", "f", ",", "degrees", ",", 
          "homogeneous", ",", "coeffs", ",", "nonnegativecoeffs", ",", "d", 
          ",", "g", ",", "A", ",", "mconvexsupport", ",", "increasingTuples", 
-         ",", "tuples", ",", "eigenvalues", ",", "result"}], "}"}], ",", 
+         ",", "tuples", ",", "eigenvalues", ",", "spectral"}], "}"}], ",", 
        "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"If", "[", 
@@ -986,6 +986,7 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"Range", "[", "n", "]"}], ",", 
            RowBox[{"d", "-", "2"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"spectral", "=", "True"}], ";", "\[IndentingNewLine]", 
         RowBox[{"Do", "[", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{
@@ -1009,7 +1010,7 @@ Cell[BoxData[
             RowBox[{
              RowBox[{"Eigenvalues", "[", "A", "]"}], "//", "N"}]}], ";", 
            "\[IndentingNewLine]", 
-           RowBox[{"result", "=", 
+           RowBox[{"spectral", "=", 
             RowBox[{"(", 
              RowBox[{
               RowBox[{"Length", "[", 
@@ -1020,20 +1021,20 @@ Cell[BoxData[
               "\[LessEqual]", "1"}], ")"}]}], ";", "\[IndentingNewLine]", 
            RowBox[{"If", "[", 
             RowBox[{
-             RowBox[{"!", "result"}], ",", 
-             RowBox[{"Return", "[", "False", "]"}]}], "]"}], ";"}], 
+             RowBox[{"!", "spectral"}], ",", 
+             RowBox[{"Break", "[", "]"}]}], "]"}], ";"}], 
           "\[IndentingNewLine]", ",", 
           RowBox[{"{", 
            RowBox[{"t", ",", "tuples"}], "}"}]}], "]"}], ";", 
         "\[IndentingNewLine]", 
-        RowBox[{"Return", "[", "True", "]"}], ";"}]}], "\[IndentingNewLine]", 
-      "]"}]}], ";"}], "\[IndentingNewLine]", 
+        RowBox[{"Return", "[", "spectral", "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
     "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
       "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", 
      "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
-      "**"}], "*******)"}], "\[IndentingNewLine]", "\n", 
+      "**"}], "*******)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
     "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
@@ -1047,13 +1048,13 @@ Cell[BoxData[
     RowBox[{
     "Uses", " ", "transition", " ", "rule", " ", "and", " ", "memoization", 
      " ", "to", " ", "speed", " ", "up", " ", 
-     RowBox[{"computation", "."}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"computation", "."}]}], "*)"}], "\n", 
    RowBox[{
     RowBox[{
      RowBox[{"GrothendieckPolynomial", "[", "w_", "]"}], ":=", 
      RowBox[{"MemoizedGrothendieckPolynomial", "[", 
-      RowBox[{"MinimalPermutation", "[", "w", "]"}], "]"}]}], ";"}], "\n", 
-   "\[IndentingNewLine]", 
+      RowBox[{"MinimalPermutation", "[", "w", "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
    RowBox[{
     RowBox[{
      RowBox[{"MemoizedGrothendieckPolynomial", "[", "w_", "]"}], ":=", 
@@ -1280,8 +1281,9 @@ Cell[BoxData[
    3.7702894962880664`*^9, 3.770289497507285*^9}, {3.770289544255537*^9, 
    3.770289601507098*^9}, {3.7702896335002155`*^9, 3.770289634371766*^9}, {
    3.770290016512167*^9, 3.77029001739894*^9}, {3.770293066719613*^9, 
-   3.7702930669045396`*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"0db9876a-9042-4f66-af7c-6f9b91b67bf8"],
+   3.7702930669045396`*^9}, {3.7744316959294243`*^9, 
+   3.774431703219917*^9}},ExpressionUUID->"0db9876a-9042-4f66-af7c-\
+6f9b91b67bf8"],
 
 Cell[BoxData[
  RowBox[{
@@ -1406,11 +1408,11 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 1165, 27, 145, "Input",ExpressionUUID->"64c7bbb2-096e-48f8-a349-50960e2bbb74",
  Evaluatable->False],
-Cell[1726, 49, 51600, 1234, 6688, "Input",ExpressionUUID->"0db9876a-9042-4f66-af7c-6f9b91b67bf8"],
-Cell[53329, 1285, 2699, 59, 425, "Input",ExpressionUUID->"8301db89-eedf-46e8-bd86-240604183c87"],
+Cell[1726, 49, 51703, 1236, 6722, "Input",ExpressionUUID->"0db9876a-9042-4f66-af7c-6f9b91b67bf8"],
+Cell[53432, 1287, 2699, 59, 425, "Input",ExpressionUUID->"8301db89-eedf-46e8-bd86-240604183c87"],
 Cell[CellGroupData[{
-Cell[56053, 1348, 1212, 25, 187, "Input",ExpressionUUID->"086f3f18-0bae-4658-8f2b-21a0229cf40c"],
-Cell[57268, 1375, 469, 11, 40, "Print",ExpressionUUID->"28ae89e9-7a83-4b97-b211-5ef64139b93f"]
+Cell[56156, 1350, 1212, 25, 187, "Input",ExpressionUUID->"086f3f18-0bae-4658-8f2b-21a0229cf40c"],
+Cell[57371, 1377, 469, 11, 40, "Print",ExpressionUUID->"28ae89e9-7a83-4b97-b211-5ef64139b93f"]
 }, Open  ]]
 }
 ]
